@@ -101,7 +101,6 @@ public class AveController extends HttpServlet {
                             url = "JSP/error.jsp";
                             request.setAttribute("error", error);
                         }
-
                     } catch (SQLException e) {
                         e.printStackTrace();
                     } finally {
@@ -122,12 +121,13 @@ public class AveController extends HttpServlet {
                         }
                         url = "JSP/vistaFinal.jsp";
                         break;
+                        
                     } catch (SQLException e) {
                         e.printStackTrace();
                     } finally {
                         resultado.close();
                     }
-            }
+                }
             request.setAttribute("aves", aves);
         } catch (
 
